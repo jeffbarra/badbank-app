@@ -1,0 +1,93 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --overlay: rgba(0, 0, 0, 0.3);
+}
+
+span {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+a {
+  font-weight: 500;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.hero-container {
+  background: url("hero.jpeg") no-repeat center center/cover;
+  background-color: var(--overlay);
+  color: white;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.3));
+}
+
+.hero-container:before {
+  content: "";
+  height: 50%;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-background {
+  background-color: var(--overlay);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  word-spacing: 5px;
+  filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.3));
+}
+
+.hero-content p {
+  margin-top: 24px;
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.3));
+}
+
+@media screen and (max-width: 940px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 24px;
+  }
+}
